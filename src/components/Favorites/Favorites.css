@@ -2,6 +2,7 @@
     box-sizing: border-box;
     border: 1px solid rgba(0, 8, 7);
     padding: 30px 20px;
+    
 }
 
 .favorites__name {
@@ -19,15 +20,43 @@
 
 .favorites__save {
     border: none;
-    background-color: #496DDB;
+    background-color: blue;
     padding: 10px 15px;
     color: #FFEEDB;
     font-size: 14px;
     transition: all 0.2s linear;
+    border-radius: 15px;
 }
+
 
 .favorites__save:hover {
     cursor: pointer;
     opacity: 0.9;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
 }
+.favorites__save:disabled{
+    background-color: gray;
+    border-radius: 15px;
+}
+.link__none {
+    display: none;
+  }
+  
+  .link__block {
+    padding: 5px 7px;
+    display: block;
+    color: blue;
+    width: 70px;
+    border-radius: 30px;
+    font-size: 16px;
+    
+  }
+  .link__block:hover{
+      cursor: pointer;
+  }
+  .favorites__list--item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }

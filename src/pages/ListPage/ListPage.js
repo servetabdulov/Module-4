@@ -31,23 +31,13 @@ class ListPage extends Component {
           <div>
           <Header />
             <div className="list-page">
-                <h1 className="list-page__title">{this.state.title}</h1>
+                <h1 className="list-page__title">Мой список</h1>
                 <ul>
                     {this.state.movies.map((item) => {
                         return (
                             <li key={item.imdbID}>
-                                <div className='MoviesList'>
-                                <div className='Left'>
-                                <a className='imgLink' href={"https://www.imdb.com/title/" + item.imdbID}>
-                                <img src={item.Poster} alt=""></img>
-                                </a>  
-                                </div>  
-                                <div className='Right'>
-                                <a  href={"https://www.imdb.com/title/" + item.imdbID} className="link__block linkInfo" target="_blank" rel="noreferrer">{item.Title} ({item.Year})</a>
-                                <div className='Info'>{item.Plot}</div>
-
-                                </div>
-                                </div>
+                                <a  href={"https://www.imdb.com/title/" + item.imdbID} className="linkInfo" target="_blank" rel="noreferrer">{item.Title} ({item.Year})</a>
+                                
                             </li>
                         );
                     })}

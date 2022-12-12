@@ -3,10 +3,12 @@
 }
 
 .list-page__title {
+    font-weight: bold;
     font-size: 34px;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
+    width: 80%;
 }
-
-.list-page ul li {
-    font-size: 18px;
+.linkInfo{
+    font-size: 25px;
+    width: 93%;
 }
