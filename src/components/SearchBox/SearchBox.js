@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './SearchBox.css';
+import { addMovies } from '../../redux/action';
+import {connect} from "react-redux"
 
 class SearchBox extends Component {
     state = {
@@ -10,6 +12,18 @@ class SearchBox extends Component {
     }
     searchBoxSubmitHandler = (e) => {
         e.preventDefault();
+        let searchText = this.state.searchLine;
+        const key= "f2649dc1"
+        fetch(`http://www.omdbapi.com/?s=${searchText}&apikey=${key}`)
+        .then(response=>response.json())
+        .then((data)=>{
+            console.log(data.Search)
+            this.props.dispatch(addMovies(data.Search))
+        })
+        .catch(error=>{
+            alert("Movie not found")
+        })
+        
     }
     render() {
         const { searchLine } = this.state;
@@ -39,5 +53,11 @@ class SearchBox extends Component {
         );
     }
 }
- 
-export default SearchBox;
+
+const mapStateToProps = (state) => {
+    return {
+        movies: state.movies,
+    }
+}
+  
+export default connect(mapStateToProps)(SearchBox);
