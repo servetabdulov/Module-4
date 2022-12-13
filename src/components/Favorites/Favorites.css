@@ -1,62 +1,72 @@
 .favorites {
-    box-sizing: border-box;
-    border: 1px solid rgba(0, 8, 7);
-    padding: 30px 20px;
-    
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 8, 7);
+  padding: 30px 20px;
 }
 
 .favorites__name {
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 16px;
-    padding: 5px 10px;
-    border: 1px solid rgba(0, 8, 7, .5);
-    margin-bottom: 24px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 8, 7, 0.5);
+  margin-bottom: 24px;
 }
 
 .favorites__list {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .favorites__save {
-    border: none;
-    background-color: blue;
-    padding: 10px 15px;
-    color: #FFEEDB;
-    font-size: 14px;
-    transition: all 0.2s linear;
-    border-radius: 15px;
+  border: none;
+  background-color: #496ddb;
+  padding: 10px 15px;
+  color: #ffeedb;
+  font-size: 14px;
+  transition: all 0.2s linear;
+  border-radius: 15px;
 }
-
 
 .favorites__save:hover {
-    cursor: pointer;
-    opacity: 0.9;
-    transition: all 0.3s linear;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.3s linear;
 }
-.favorites__save:disabled{
-    background-color: gray;
-    border-radius: 15px;
+.favorites__save:disabled {
+  background-color: gray;
+  border-radius: 15px;
+  cursor: not-allowed;
 }
 .link__none {
-    display: none;
+  display: none;
+}
+.link__block {
+  padding: 5px 7px;
+  display: block;
+  color: blue;
+  border-radius: 30px;
+  font-size: 16px;
+}
+.link__block:hover {
+  cursor: pointer;
+}
+.favorites__list--item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.favorites__list--delete {
+  cursor: pointer;
+}
+.favorites__list--delete:disabled {
+  cursor: not-allowed;
+}
+@media (max-width: 700px) {
+  .favorites {
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 8, 7);
+    padding: 30px 20px;
+    min-width: 250px;
   }
-  
-  .link__block {
-    padding: 5px 7px;
-    display: block;
-    color: blue;
-    width: 70px;
-    border-radius: 30px;
-    font-size: 16px;
-    
-  }
-  .link__block:hover{
-      cursor: pointer;
-  }
-  .favorites__list--item{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4px;
-  }
+}

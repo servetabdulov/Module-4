@@ -55,7 +55,7 @@ class Favorites extends Component {
                 </p>
                 <button
                   className="favorites__list--delete"
-                  disabled={this.state.linkActive ? true:null}
+                  disabled={this.state.linkActive ? true : null}
                   onClick={() => {
                     this.props.removeMovie(item.imdbID);
                   }}

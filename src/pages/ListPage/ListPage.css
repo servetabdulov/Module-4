@@ -1,14 +1,14 @@
 .list-page {
-    padding: 42px calc(50% - 300px);
+  padding: 42px calc(50% - 300px);
 }
 
 .list-page__title {
-    font-weight: bold;
-    font-size: 34px;
-    margin-bottom: 20px;
-    width: 80%;
+  font-weight: bold;
+  font-size: 34px;
+  margin-bottom: 20px;
+  width: 80%;
 }
-.linkInfo{
-    font-size: 25px;
-    width: 93%;
+.linkInfo {
+  font-size: 25px;
+  width: 93%;
 }

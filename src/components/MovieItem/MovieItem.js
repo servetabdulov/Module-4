@@ -25,14 +25,12 @@ class MovieItem extends Component {
           <button
             type="button"
             className="movie-item__add-button"
-            onClick={()=>{
-                addMovie(imdbID)
+            onClick={() => {
+              addMovie(imdbID);
             }}
             disabled={this.ifIdInFavorites(imdbID)}
           >
-            {this.ifIdInFavorites(imdbID)
-              ? "был добавлен"
-              : "Добавить в список"}
+            {this.ifIdInFavorites(imdbID) ? "Добавлен" : "Добавить в список"}
           </button>
         </div>
       </article>
