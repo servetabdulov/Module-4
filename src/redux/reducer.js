@@ -1,7 +1,6 @@
 const initState = {
   movies: [],
-  listMovies: [],
-  textChange: "Add To List",
+  listMovies: []
 };
 
 const reducer = (state = initState, action) => {
@@ -20,12 +19,9 @@ const reducer = (state = initState, action) => {
       const filterMovie = state.listMovies.filter(
         (item) => item.imdbID !== action.payload.id
       );
-      const textChange =
-        state.textChange === "Add To List" ? "Added" : "Add To List";
       return {
         ...state,
-        listMovies: filterMovie,
-        textChange: textChange,
+        listMovies: filterMovie
       };
 
     case "ADD_MOVIES":

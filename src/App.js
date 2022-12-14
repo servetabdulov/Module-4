@@ -4,7 +4,7 @@ import MainPage from "./pages/MainPage/MainPage";
 import ListPage from "./pages/ListPage/ListPage";
 
 import "./reset.css";
-import "./common.css";
+import "./common.css";  
 
 function App() {
   return (
