@@ -96,7 +96,6 @@ class Favorites extends Component {
 const mapStateToProps = (state) => {
   return {
     listMovies: state.listMovies,
-    textChange: state.textChange,
   };
 };
 

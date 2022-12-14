@@ -10,10 +10,7 @@ const reducer = (state = initState, action) => {
         (item) => item.imdbID === action.payload.id
       );
       const listMovies = [...state.listMovies, { ...newMovie }];
-      return {
-        ...state,
-        listMovies,
-      };
+      return { ...state, listMovies };
 
     case "REMOVE_TO_MOVIE":
       const filterMovie = state.listMovies.filter(
