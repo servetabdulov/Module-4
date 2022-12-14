@@ -11,9 +11,6 @@ class Movies extends Component {
           <li className="movies__item" key={movie.imdbID}>
             <MovieItem
               {...movie}
-              disabled={this.props.listMovies.find(
-                (element) => element.imdbID === movie.imdbID
-              )}
             />
           </li>
         ))}
